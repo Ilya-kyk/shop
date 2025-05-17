@@ -10,6 +10,15 @@ body {
   color: $color-accent;
 }
 
+.promo{
+  background-color: $bg-primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: $color-primary;
+  padding: 7px 0 9px;
+}
+
 .header {
   padding: 20px 0 40px;
   text-transform: uppercase;
@@ -42,6 +51,8 @@ body {
     align-items: center;
   }
 }
+
+
 
 .menu {
   &__list {
@@ -146,5 +157,40 @@ body {
       left: -21px;
       position: absolute;
     }
+  }
+}
+
+.top{
+  min-height: 90vh;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  
+  &__content{
+    padding: 115px 0 50px;
+    max-width: 446px;
+    margin-right: 134px;
+  }
+  
+  &__title{
+    @extend %lora-400;
+    font-size: 80px;
+    margin-bottom: 60px;
+    line-height: 1.2;
+  }
+
+  &__link{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $color-accent;
+    padding: 12px 38px;
+    border-radius: 3px;
+
   }
 }
