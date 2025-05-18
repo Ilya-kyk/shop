@@ -194,3 +194,70 @@ body {
 
   }
 }
+
+.new-collection {
+  background-image: url(../images/new-collection-decor.svg);
+  background-repeat: no-repeat;
+  background-position: 250px -36%;
+  
+  &__inner {
+    padding: 150px 0;
+    display: flex;
+  }
+
+  &__content {
+    padding: 75px 40px 0 40px;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 43px;
+    @extend %lora-400;
+  }
+
+  &__text {
+    color: $color-text-muted;
+  }
+
+  &__text + .new-collection__text{
+    margin-top: 25px;
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 16px;
+    color: $color-text-muted;
+    border: 1px solid $bg-primary;
+    padding: 10px 65px;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  &__img {
+    margin-top: 75px;
+  }
+
+  &__box {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    max-width: fit-content;
+  }
+
+  &__caption {
+    width: 290px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    color: $color-text-muted;
+  }
+}
