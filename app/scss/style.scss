@@ -1,7 +1,7 @@
-@import './reset.scss';
-@import './_fonts.scss';
-@import './_global.scss';
-@import './_vars.scss';
+@import './_reset';
+@import './_fonts';
+@import './_global';
+@import './_vars';
 
 
 body {
@@ -323,6 +323,8 @@ body {
     padding: 12px;
     border: none;
     cursor: pointer;
+    position: relative;
+    z-index: 10;
   }
 
   &__form-caption {
@@ -332,11 +334,20 @@ body {
 
 .designer {
   padding: 150px 0 210px;
+  position: relative;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -225px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
   }
 
   &__content {
@@ -437,5 +448,68 @@ body {
       left: 0;
       background-image: url(../images/list-decor.svg);
     }
+  }
+}
+
+.our-blog {
+  padding: 150px 0 100px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 280px 330px;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 0 40px;
+    background-image: url('../images/our-blog-decor.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @extend %lora-400;
+    font-size: 45px;
+  }
+
+  &__text {
+    max-width: 400px;
+    margin-bottom: 50px;
+    color: $color-text-muted;
+    font-size: 15px;
+  }
+
+  &__btn-link {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 93px;
+    color: $color-text-muted;
+    border: 1px solid $bg-primary;
+  }
+
+  &__link {
+    @extend %lora-400;
+    margin-bottom: 5px;
+    color: $color-text-muted;
+  }
+
+  &__box-right {
+    grid-row: span 2;
+    align-self: center;
+    margin-top: -90px;
+  }
+
+  &__box-img {
+    margin-bottom: 20px;
+  }
+
+  &__box-date {
+    color: $color-primary;
+    font-size: 13px;
+    @extend %opensans-300;
+  }
+
+  &__box-bottom {
+    grid-column: span 2;
+    margin-left: auto;
   }
 }
