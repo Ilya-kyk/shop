@@ -624,6 +624,8 @@ body {
 
   &__inner {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
   }
 
   &__item {
@@ -650,5 +652,6 @@ body {
     background-color: transparent;
     border: none;
     padding: 0;
+    cursor: pointer;
   }
 }
