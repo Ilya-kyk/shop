@@ -585,9 +585,11 @@ body {
 }
 
 .collections-main {
+
   .breadcrumbs {
     padding-top: 50px;
   }
+
 }
 
 .breadcrumbs {
@@ -615,6 +617,17 @@ body {
 .collections {
   padding-bottom: 100px;
 
+  &__container {
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -225px;
+    right: -30px;
+    z-index: 5;
+  }
+
   &__title {
     margin-bottom: 50px;
     @extend %lora-400;
@@ -624,12 +637,76 @@ body {
 
   &__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 40px;
+    grid-template-areas:
+      "aa ab ba bb"
+      "cc cc ca cb"
+      "cc cc da db"
+      "ea eb ee ee"
+      "fa fb ee ee";
   }
 
   &__item {
     position: relative;
+    height: fit-content;
+
+    &:nth-child(1) {
+      grid-area: aa;
+    }
+
+    &:nth-child(2) {
+      grid-area: ab;
+    }
+
+    &:nth-child(3) {
+      grid-area: ba;
+    }
+
+    &:nth-child(4) {
+      grid-area: bb;
+    }
+
+    &:nth-child(5) {
+      grid-area: cc;
+    }
+
+    &:nth-child(6) {
+      grid-area: ca;
+    }
+
+    &:nth-child(7) {
+      grid-area: cb;
+    }
+
+    &:nth-child(8) {
+      grid-area: da;
+    }
+
+    &:nth-child(9) {
+      grid-area: db;
+    }
+
+    &:nth-child(10) {
+      grid-area: ea;
+      margin-top: -130px;
+    }
+
+    &:nth-child(11) {
+      grid-area: eb;
+      margin-top: -130px;
+    }
+
+    &:nth-child(12) {
+      grid-area: ee;
+    }
+
+    &:nth-child(13) {
+      grid-area: fa;
+    }
+
+    &:nth-child(14) {
+      grid-area: fb;
+    }
   }
 
   &__item-text {
@@ -653,5 +730,49 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
+  }
+}
+
+.pagination {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-primary;
+  font-size: 16px;
+  gap: 2px;
+
+  &__list {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link--active {
+    color: #fff;
+    background-color: $color-text-muted;
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow-disable {
+    display: none;
   }
 }
