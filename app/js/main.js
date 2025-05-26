@@ -4,7 +4,7 @@ const swiper = new Swiper('.accessories__slider', {
   spaceBetween: 40,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.accessories__arrow-next',
+    prevEl: '.accessories__arrow-prev',
   },
 });

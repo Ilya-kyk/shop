@@ -966,17 +966,24 @@ body {
 .accessories {
   margin-bottom: 90px;
 
-  &__inner {
-    max-width: 890px;
-    margin: 0 auto;
+  &__inner{
+    position: relative;
+  }
+
+  &__decor{
+    position: absolute;
+    top: -110px;
+    right: 54px;
   }
 
   &__title {
+    max-width: 890px;
+    margin: 0 auto;
     text-align: center;
     padding-bottom: 25px;
     @extend %lora-400;
     font-size: 30px;
-    border-bottom: 2px solid $color-text-muted;
+    border-bottom: 2px solid #E9E1D7;
     margin-bottom: 40px;
   }
 
@@ -984,6 +991,9 @@ body {
     overflow: hidden;
     width: 100%;
     position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 
   &__slider-wrapper {}
@@ -1002,5 +1012,21 @@ body {
 
   &__slide-prise {
     @extend %opensans-700;
+  }
+
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 35%;
+    z-index: 10;
+
+  }
+
+  &__arrow-prev {
+    left: 7px;
+  }
+
+  &__arrow-next {
+    right: 7px;
   }
 }
