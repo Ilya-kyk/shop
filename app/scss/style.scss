@@ -996,8 +996,6 @@ body {
     padding: 0 30px;
   }
 
-  &__slider-wrapper {}
-
   &__slide {
     text-align: center;
   }
@@ -1100,4 +1098,147 @@ body {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.blog-main {
+  margin-bottom: 32px;
+
+  &__inner {
+    padding: 40px 0;
+    border-top: 1px solid #dcddde;
+    border-bottom: 1px solid #dcddde;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__img {
+    width: 740px;
+    max-width: max-content;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    margin-bottom: 40px;
+    display: inline-block;
+    padding: 8px 24px;
+    border: 1px solid #dcddde;
+    @extend %lora-400;
+    font-size: 14px;
+    align-self: flex-start;
+  }
+
+  &__title {
+    a {
+      display: inline-block;
+      margin-bottom: 40px;
+      font-size: 48px;
+      text-transform: uppercase;
+      @extend %lora-400;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    margin-bottom: auto;
+    opacity: 0.4;
+    max-width: 660px;
+  }
+
+  &__link {
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 32px 64px;
+    border: 1px solid $color-accent;
+    align-self: flex-start;
+  }
+}
+
+.blog {
+  &__nav {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-bottom: 33px;
+  }
+
+  &__nav-title {
+    margin-right: auto;
+    @extend %lora-400;
+    font-size: 32px;
+  }
+
+  &__select-form {}
+
+  &__search {}
+
+  &__search-form {
+    position: relative;
+    width: 300px;
+  }
+
+  &__search-input {
+    border: none;
+    border-bottom: 1px solid #dcddde;
+    padding: 2px 31px 14px 3px;
+    width: 100%;
+
+    &::placeholder {
+      color: #dcddde;
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 3px;
+    top: 8px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  &__nav-btns {
+    margin-left: 100px;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__nav-btns-item {}
+
+  &__nav-btn {
+    padding: 0;
+    bottom: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__nav-btn-grid {}
+
+  &__nav-btn-line {}
+
+  &__items {}
+
+  &__list {}
+
+  &__item {}
+
+  &__item-link-img {}
+
+  &__item-img {}
+
+  &__item-content {}
+
+  &__item-cayegory {}
+
+  &__item-title {}
+
+  &__item-date {}
+}
+
+.select {
+  &__wrapper {}
 }
