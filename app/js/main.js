@@ -1,3 +1,10 @@
+const headerBtn = document.querySelector ('.header__btn');
+const menu = document.querySelector ('.menu');
+
+headerBtn.addEventListener('click', () => {
+  menu.classList.toggle('menu--active')
+})
+
 const modeContainer = document.querySelector('.view-mode__container');
 const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
 const modeBtnLine = document.querySelector('.view-mode__btn-line');

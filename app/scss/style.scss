@@ -6,6 +6,7 @@
 @import '../../node_modules/nouislider/dist/nouislider';
 
 
+
 body {
   @extend %opensans-400;
   font-size: 20px;
@@ -41,8 +42,17 @@ body {
     margin-bottom: 15px;
   }
 
+  &__btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+
   &__lang {
     display: flex;
+    margin-right: 215px;
 
     &--active {
       @extend %opensans-700;
@@ -63,6 +73,8 @@ body {
     display: flex;
     gap: 30px;
   }
+
+  display: flex;
 }
 
 .logo {
@@ -110,6 +122,7 @@ body {
   &__form {
     width: 250px;
     position: relative;
+    margin-bottom: 10px;
   }
 
   &__form-input {
@@ -1371,8 +1384,6 @@ body {
     align-items: center;
   }
 
-  &__stats-item {}
-
   &__stats-link {
     display: flex;
     gap: 4px;
@@ -1411,10 +1422,6 @@ body {
     width: calc(100vw - (100vw - 1500px)/2);
   }
 
-  &__slider-wrapper {}
-
-  &__slide {}
-
   &__slider-addreview {
     display: inline-block;
     font-size: 16px;
@@ -1422,8 +1429,6 @@ body {
     border: 1px solid $color-accent;
     margin-top: 24px;
   }
-
-  &__list {}
 
   &__item-date {
     font-size: 14px;
@@ -1439,8 +1444,6 @@ body {
     margin-top: 18px;
     margin-bottom: 24px;
   }
-
-  &__item-avatar-img {}
 
   &__item-text {
     margin-bottom: 24px;
@@ -1571,8 +1574,6 @@ body {
     color: $color-primary;
   }
 
-  &__filter-form {}
-
   &__filterbox {
     padding-bottom: 8px;
     border-bottom: 1px solid $color-text-muted;
@@ -1632,8 +1633,6 @@ body {
     margin-bottom: 15px;
   }
 
-  .check-box {}
-
   .check-style {
     margin-top: -1px;
 
@@ -1644,8 +1643,6 @@ body {
     display: block;
   }
 
-  .radio-box {}
-
   .radio-style {
     margin-top: -1px;
   }
@@ -1655,8 +1652,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-
-  &__item {}
 
   &__btn {
     padding: 0;
@@ -1704,7 +1699,6 @@ body {
 
 
 .catalog-sort {
-  &__form {}
 
   &__wrapper {
     position: relative;
@@ -1771,12 +1765,6 @@ body {
       font-size: 11px;
     }
   }
-
-  &__min {}
-
-  &__max {}
-
-  &__slider {}
 
   &__list {
     display: flex;
@@ -1946,10 +1934,6 @@ body {
     color: rgba($color: $color-accent, $alpha: 0.4);
     appearance: none;
   }
-
-  &__info-deltext {}
-
-  &__info-delbox {}
 
   &__info-radio {
     padding: 26px 0;
@@ -2138,17 +2122,13 @@ body {
     margin-bottom: 20px;
     align-items: center;
 
-  &:last-child{
-    opacity: 1;
-    font-size: 32px;
-    margin-bottom: 0;
-    margin-top: 32px;
+    &:last-child {
+      opacity: 1;
+      font-size: 32px;
+      margin-bottom: 0;
+      margin-top: 32px;
+    }
   }
-  }
-
-  &__list-term {}
-
-  &__list-difinition {}
 
   &__link {
     text-transform: uppercase;
@@ -2158,3 +2138,5 @@ body {
     padding: 30px;
   }
 }
+
+@import './_media';
