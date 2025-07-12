@@ -1,5 +1,5 @@
-const headerBtn = document.querySelector ('.header__btn');
-const menu = document.querySelector ('.menu');
+const headerBtn = document.querySelector('.header__btn');
+const menu = document.querySelector('.menu');
 
 headerBtn.addEventListener('click', () => {
   menu.classList.toggle('menu--active')
@@ -9,12 +9,12 @@ const modeContainer = document.querySelector('.view-mode__container');
 const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
 const modeBtnLine = document.querySelector('.view-mode__btn-line');
 
-modeBtnGrid.addEventListener('click', () => {
+modeBtnGrid?.addEventListener('click', () => {
   modeContainer.classList.add('view-mode__container--grid')
   modeContainer.classList.remove('view-mode__container--line')
 })
-  
-modeBtnLine.addEventListener('click', () => {
+
+modeBtnLine?.addEventListener('click', () => {
   modeContainer.classList.add('view-mode__container--line')
   modeContainer.classList.remove('view-mode__container--grid')
 })
@@ -54,6 +54,21 @@ const swiperReviews = new Swiper('.reviews__slider', {
   pagination: {
     el: ".reviews__pagination",
     type: "fraction",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 6,
+      spaceBetween: 16,
+    },
+    768: {
+      slidesPerView: 8,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 12,
+      spaceBetween: 16,
+    },
   },
 
 });
