@@ -904,6 +904,10 @@ body {
     display: flex;
     gap: 10px;
   }
+
+  &__arrow {
+    display: none;
+  }
 }
 
 .radio-box {
